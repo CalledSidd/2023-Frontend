@@ -1,7 +1,7 @@
 
 import './App.css';
 
-function App() {
+function App() { 
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
