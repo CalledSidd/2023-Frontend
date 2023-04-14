@@ -7,16 +7,19 @@ function Textform(props) {
   const handleUpClick = () => {
     let newText = text.toUpperCase();
     setText(newText)
+    props.showAlert("Converted to Uppercase", "success")
   }
 
   const handleLoClick = () => {
     let newText = text.toLowerCase();
     setText(newText)
+    props.showAlert("Converted to LowerCase", "success")
   }
 
   const handleClearText = () => {
     let newText = '';
     setText(newText)
+    props.showAlert("Cleared", "success")
   }
 
   const handleOnChange = (e) => {
@@ -27,6 +30,7 @@ function Textform(props) {
     var text = document.getElementById('text-area')
     text.select();
     navigator.clipboard.writeText(text.value)
+    props.showAlert("Copied", 'success')
   }
   return (
     <>
