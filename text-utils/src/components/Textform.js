@@ -22,17 +22,24 @@ function Textform(props) {
   const handleOnChange = (e) => {
     setText(e.target.value)
   }
+
+  const handleCopy = () => {
+    var text = document.getElementById('text-area')
+    text.select();
+    navigator.clipboard.writeText(text.value)
+  }
   return (
     <>
     <div className='container'>
       <h1>{props.heading}</h1>
       <div className="form-floating">
-        <textarea className="form-control" value={text} onChange={handleOnChange} rows="5" id="floatingTextarea2" ></textarea>
+        <textarea className="form-control" value={text} onChange={handleOnChange} rows="5" id="text-area" ></textarea>
       </div>
       <div>
         <button className="btn btn-primary mt-3"  onClick={handleUpClick}>Uppercase</button>
         <button className="btn btn-primary mt-3 ms-3" onClick={handleLoClick}>Lowercase</button>
         <button className="btn btn-primary mt-3 ms-3" onClick={handleClearText}>Clear</button>
+        <button className="btn btn-primary mt-3 ms-3" onClick={handleCopy}>Copy</button>
       </div>
     </div>
     <div className="container my-3">
