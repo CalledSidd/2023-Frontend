@@ -33,7 +33,7 @@ function Textform(props) {
     <div className='container'>
       <h1>{props.heading}</h1>
       <div className="form-floating">
-        <textarea className="form-control" value={text} onChange={handleOnChange} rows="5" id="text-area" ></textarea>
+        <textarea className="form-control" value={text} style={{backgroundColor:props.mode==='dark'?'#212529':'white', color:props.mode==='dark'?'white':'black'}} onChange={handleOnChange} rows="5" id="text-area" ></textarea>
       </div>
       <div>
         <button className="btn btn-primary mt-3"  onClick={handleUpClick}>Uppercase</button>
@@ -47,7 +47,7 @@ function Textform(props) {
       <p>{readTime} Words, {text.length} Characters </p>
       <p>{0.008 * readTime} Minutes read</p>
       <h2>Preview</h2>
-      <p>{text}</p>
+      <p>{text.length>0?text:'Enter Something for Preview :)'}</p>
     </div>
     </>
   )
