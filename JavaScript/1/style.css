@@ -1,5 +1,4 @@
-.main-div{
-    width: 100vw;
-    height: 100vh;
-    background-color: tomato;
+nav {
+    background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 59%, rgba(5,62,62,1) 86%);
 }
