@@ -11,13 +11,16 @@
             cursor: pointer;
             
         }
+        .btn{
+            margin-top: 12px;
+        }
     </style>
 </head>
 <body>
     <div x-data="{ todos: [], userInput: ''}">
         <form @submit.prevent>
             <input x-model="userInput" placeholder="Enter todo Item" type="text" name="" id="">
-            <button @click="if(userInput.trin().length > 0) todos.push({name: userInput, completed: false}); userInput = ''" >Add</button>
+            <button @click="if(userInput.trim().length > 0) todos.push({name: userInput, completed: false}); userInput = ''" >Add</button>
         </form>
         <template x-for="todo in todos">
             <div>
@@ -26,6 +29,7 @@
                 <button @click="todos = todos.filter((current) => current != todo)" class="delete">x</button>
             </div>
         </template>
+        <button @click="todos = []" x-show="todos.length" class="btn"> Clear </button>
     </div>
 </body>
 </html>
