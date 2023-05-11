@@ -6,18 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Alpine todolist</title>
+    <style>
+        .delete:hover{
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <div x-data="{ todos: [], userInput: ''}">
         <form @submit.prevent>
             <input x-model="userInput" placeholder="Enter todo Item" type="text" name="" id="">
-            <button @click="todos.push({name: userInput, completed: false})" >Add</button>
+            <button @click="if(userInput.length > 0) todos.push({name: userInput, completed: false}); userInput = ''" >Add</button>
         </form>
         <template x-for="todo in todos">
             <div>
                 <input type="checkbox">
                 <span x-text="todo.name"></span>
-                <button @click="todos = todos.filter((current) => current != todo)">x</button>
+                <button @click="todos = todos.filter((current) => current != todo)" class="delete">x</button>
             </div>
         </template>
     </div>
