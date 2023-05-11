@@ -17,7 +17,7 @@
     <div x-data="{ todos: [], userInput: ''}">
         <form @submit.prevent>
             <input x-model="userInput" placeholder="Enter todo Item" type="text" name="" id="">
-            <button @click="if(userInput.length > 0) todos.push({name: userInput, completed: false}); userInput = ''" >Add</button>
+            <button @click="if(userInput.trin().length > 0) todos.push({name: userInput, completed: false}); userInput = ''" >Add</button>
         </form>
         <template x-for="todo in todos">
             <div>
