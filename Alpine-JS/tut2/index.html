@@ -14,22 +14,29 @@
         .btn{
             margin-top: 12px;
         }
+        .completed{
+            text-decoration: line-through;
+        }
     </style>
 </head>
 <body>
     <div x-data="{ todos: [], userInput: ''}">
         <form @submit.prevent>
             <input x-model="userInput" placeholder="Enter todo Item" type="text" name="" id="">
-            <button @click="if(userInput.trim().length > 0) todos.push({name: userInput, completed: false}); userInput = ''" >Add</button>
+            <button @click="if(userInput.trim().length > 0) todos.push({name: userInput, completed: false,}); userInput = ''" >Add</button>
         </form>
-        <template x-for="todo in todos">
+        <template x-for="todo in todos" :key="todo.id">
             <div>
-                <input type="checkbox">
-                <span x-text="todo.name"></span>
+                <input type="checkbox" x-model="todo.completed">
+                <span x-text="todo.name" :class="{'completed': todo.completed}"></span>
                 <button @click="todos = todos.filter((current) => current != todo)" class="delete">x</button>
             </div>
         </template>
-        <button @click="todos = []" x-show="todos.length" class="btn"> Clear </button>
+        <button @click="todos = []" x-show="todos.length" class="btn">Clear</button>
+        <div>
+            <span x-text="todos.filter((todo) => todo.completed).length"></span>/
+            <span x-text="todos.length"></span> completed
+        </div>
     </div>
 </body>
 </html>
