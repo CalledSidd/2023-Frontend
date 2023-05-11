@@ -9,10 +9,17 @@
 </head>
 <body>
     <div x-data="{ todos: [], userInput: ''}">
-        <form>
+        <form x-on:submit.prevent>
             <input x-model="userInput" placeholder="Enter todo Item" type="text" name="" id="">
             <button x-on:click="todos.push({name: userInput, completed: false})" >Add</button>
         </form>
+        <template x-for="todo in todos">
+            <div>
+                <input type="checkbox">
+                <span x-text="todo.name"></span>
+                <button>X</button>
+            </div>
+        </template>
     </div>
 </body>
 </html>
