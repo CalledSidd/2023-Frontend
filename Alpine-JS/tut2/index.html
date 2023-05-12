@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Alpine todolist</title>
     <style>
         .delete:hover{
@@ -32,7 +33,7 @@
                 <button @click="todos = todos.filter((current) => current != todo)" class="delete">x</button>
             </div>
         </template>
-        <button @click="todos = []" x-show="todos.length" class="btn">Clear</button>
+        <button @click="todos = []" x-show="todos.length" class="">Clear</button>
         <div>
             <span x-text="todos.filter((todo) => todo.completed).length"></span>/
             <span x-text="todos.length"></span> completed Todos
