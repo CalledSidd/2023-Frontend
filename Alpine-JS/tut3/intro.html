@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Alpine Tutorial 3</title>
+</head>
+<body> 
+    <div x-data="{Name:''}">
+        <button @click="Name = 'Nithya'">Wife</button>
+        <button @click="Name = 'Sidharth'">Husband</button>
+        <button @click="Name = 'Imeya'">Daughter</button>
+        <p x-text="Name"></p>
+    </div>
+</body>
+</html>
