@@ -1,1 +1,1 @@
-console.log("Code with Mosh Tutorial")
+console.log("Code with Mosh Tutorial");
