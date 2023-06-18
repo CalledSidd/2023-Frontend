@@ -15,3 +15,7 @@ console.log(interestRate)
 
 let age = 19;
 let isApproved = true;
+let FirstName; // when a variable is not defined it's undefined
+let selectedColor = null;
+
+// JavaScript is a dynamically typed language what that means is that the type of a variable can change at runtime
