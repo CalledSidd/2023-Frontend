@@ -1,5 +1,4 @@
-let name = 'Sidharth'
-console.log(name)
+
 
 let firstName = 'Sidharth';
 
@@ -13,9 +12,17 @@ const interestRate = 0.3;
 
 console.log(interestRate)
 
-let age = 19;
 let isApproved = true;
 let FirstName; // when a variable is not defined it's undefined
 let selectedColor = null;
 
 // JavaScript is a dynamically typed language what that means is that the type of a variable can change at runtime
+
+
+//Reference Types : Objects, Arrays, Functions 
+//Objects 
+
+const person = {
+    name : 'Sidharth',
+    age : 18
+};
