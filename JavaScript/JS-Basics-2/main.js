@@ -26,3 +26,4 @@ const person = {
     name : 'Sidharth',
     age : 18
 };
+console.log(person)
