@@ -5,7 +5,7 @@ let firstName = 'Sidharth';
 
 let lastName = 'S';
 
-let interestRate = 0.3;
+const interestRate = 0.3;
 
 interestRate = 1;
 // the value of a variable can change but constants can't be changed
