@@ -12,3 +12,6 @@ const interestRate = 0.3;
 // the value of a variable can change but constants can't be changed
 
 console.log(interestRate)
+
+let age = 19;
+let isApproved = true;
