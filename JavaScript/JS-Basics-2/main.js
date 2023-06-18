@@ -1,2 +1,2 @@
-let value = 34
-console.log(value)
+let name = 'Sidharth'
+console.log(name)
