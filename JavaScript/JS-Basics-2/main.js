@@ -32,3 +32,7 @@ person.name = 'Nithya'
 person.age = 21
 
 console.log(person)
+
+person['name'] = 'Imeya'
+
+console.log(person.name)
