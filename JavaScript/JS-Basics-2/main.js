@@ -36,3 +36,5 @@ console.log(person)
 person['name'] = 'Imeya'
 
 console.log(person.name)
+let selectedColors = ['red', 'blue']
+console.log(selectedColors)
