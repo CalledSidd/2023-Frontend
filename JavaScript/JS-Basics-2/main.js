@@ -41,3 +41,5 @@ let selectedColors = ['red', 'blue']
 selectedColors[2]  = 'violet'
 
 console.log(selectedColors)
+
+console.log(typeof(selectedColors))
