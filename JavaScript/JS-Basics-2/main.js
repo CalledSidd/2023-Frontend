@@ -52,4 +52,4 @@ function greet(input) {
     console.log(input);
 }
 
-greet("This is used as in");
+greet("This is used as input");
