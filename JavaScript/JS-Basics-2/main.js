@@ -38,6 +38,6 @@ person['name'] = 'Imeya'
 console.log(person.name)
 let selectedColors = ['red', 'blue']
 
-
+selectedColors[2]  = 'violet'
 
 console.log(selectedColors)
