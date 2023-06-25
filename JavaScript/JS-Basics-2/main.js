@@ -27,3 +27,8 @@ const person = {
     age : 18
 };
 console.log(person)
+
+person.name = 'Nithya'
+person.age = 21
+
+console.log(person)
