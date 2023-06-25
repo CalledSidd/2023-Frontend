@@ -48,8 +48,15 @@ console.log(selectedColors.length)
 
 // Functions
 
+
 function greet(input) {
     console.log(input);
 }
 
 greet("This is used as input");
+greet("This is a note");
+
+function square(n) {
+   return n * n;
+}
+console.log(square(5));
