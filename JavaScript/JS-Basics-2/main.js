@@ -20,7 +20,7 @@ let selectedColor = null;
 
 
 //Reference Types : Objects, Arrays, Functions 
-//Objects 
+//Objects and Arrays
 
 const person = {
     name : 'Sidharth',
@@ -45,3 +45,11 @@ console.log(selectedColors)
 console.log(typeof(selectedColors))
 
 console.log(selectedColors.length)
+
+// Functions
+
+function greet(input) {
+    console.log(input);
+}
+
+greet("This is used as in");
