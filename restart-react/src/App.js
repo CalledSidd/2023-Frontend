@@ -10,11 +10,17 @@ function App() {
       }}
     >
       <h1 className='title'>Pokemon Search</h1>
-      <table>
+      <table width="100%">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+          </tr>
+        </thead>
         <tbody>
           <tr>
             <td>Pikachoo</td>
-            <td>Bulbasaur</td>
+            <td>Electricity</td>
           </tr>
         </tbody>
       </table>
