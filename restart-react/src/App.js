@@ -19,8 +19,8 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          {pokemon.map((pokemon, index) => (
-          <tr key={index}>
+          {pokemon.slice(0,40).map((pokemon) => (
+          <tr key={pokemon.id}>
             <td>{pokemon.name.english}</td>
             <td>{pokemon.type.join(", ")}</td>
           </tr>
