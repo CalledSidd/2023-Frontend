@@ -1,10 +1,18 @@
 import './App.css';
 import pokemon from './pokemon.json'
 
+
+const PokemonRow = ({ pokemon }) => {
+  <tr>
+    <td>{pokemon.name.english}</td>
+    <td>{pokemon.type.join(", ")}</td>
+  </tr>
+}
+
 function App() {
   return (
-    <div className="App" 
-    style={{
+    <div className="App"
+      style={{
         margin: 'auto',
         width: 800,
         paddingTop: "1rem"
@@ -19,11 +27,8 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          {pokemon.slice(0,40).map((pokemon) => (
-          <tr key={pokemon.id}>
-            <td>{pokemon.name.english}</td>
-            <td>{pokemon.type.join(", ")}</td>
-          </tr>
+          {pokemon.slice(0, 40).map((pokemon) => (
+          <PokemonRow key={pokemon.id} pokemon={pokemon}/>
           )
           )}
         </tbody>
