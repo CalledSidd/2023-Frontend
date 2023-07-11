@@ -1,5 +1,5 @@
 import './App.css';
-import PropTypes from "prop-types"
+import PropTypes, { object } from "prop-types"
 import pokemon from './pokemon.json'
 import React from 'react';
 
@@ -31,6 +31,16 @@ PokemonRow.propTypes = {
 const PokemonInfo = ({name, base}) => (
   <div>
     <h1>{name.english}</h1>
+    <table>
+      {
+        Object.keys(base).map(key => (
+          <tr key={key}>
+            <td>{key}</td>
+            <td>{base[key]}</td>
+          </tr>
+        ))
+      }
+    </table>
   </div>
 )
 
