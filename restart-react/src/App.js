@@ -1,6 +1,5 @@
 import './App.css';
 import PropTypes, { object } from "prop-types"
-import pokemon from './pokemon.json'
 import React from 'react';
 
 
@@ -64,6 +63,15 @@ function App() {
   const [filter, filterSet] = React.useState("");
   const [selectedItem, selectedItemSet] = React.useState(null)
   const [pokemon, pokemonSet] = React.useState([])
+
+
+  React.useEffect(() => {
+    fetch("http://localhost:3000/pokemon.json")
+    .then(response => response.json())
+    .then(data => pokemonSet(data))
+  }, [])
+
+
   return (
     <div className="App"
       style={{
