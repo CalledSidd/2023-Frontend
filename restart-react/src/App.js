@@ -63,6 +63,7 @@ PokemonInfo.propTypes = {
 function App() {
   const [filter, filterSet] = React.useState("");
   const [selectedItem, selectedItemSet] = React.useState(null)
+  const [pokemon, pokemonSet] = React.useState([])
   return (
     <div className="App"
       style={{
