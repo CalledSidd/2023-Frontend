@@ -3,12 +3,13 @@ import PropTypes from "prop-types"
 import pokemon from './pokemon.json'
 
 
-const PokemonRow = ({ pokemon }) => {
+const PokemonRow = ({ pokemon }) => (
   <tr>
     <td>{pokemon.name.english}</td>
     <td>{pokemon.type.join(", ")}</td>
   </tr>
-}
+)
+;
 
 PokemonRow.propTypes = {
   pokemon : PropTypes.shape({
@@ -37,8 +38,8 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          {pokemon.slice(0, 40).map((pokemon) => (
-          <PokemonRow key={pokemon.id} pokemon={pokemon}/>
+          {pokemon.slice(0, 20).map((pokemon) => (
+          <PokemonRow pokemon={pokemon} key={pokemon.id}  />
           )
           )}
         </tbody>
