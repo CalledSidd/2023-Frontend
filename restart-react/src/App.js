@@ -10,6 +10,15 @@ const PokemonRow = ({ pokemon }) => {
   </tr>
 }
 
+PokemonRow.propTypes = {
+  pokemon : PropTypes.shape({
+    name : PropTypes.shape({
+      english : PropTypes.string,
+    }),
+    type : PropTypes.arrayOf(PropTypes.string)
+  }),
+}
+
 function App() {
   return (
     <div className="App"
