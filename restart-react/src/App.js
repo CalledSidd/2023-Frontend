@@ -23,6 +23,7 @@ PokemonRow.propTypes = {
 
 function App() {
   const [filter, filterSet] = React.useState("");
+  const [selectedItem, selectedItemSet] = React.useState(null)
   return (
     <div className="App"
       style={{
@@ -36,7 +37,14 @@ function App() {
        value={filter}
        onChange={(event)=>{filterSet(event.target.value)}}
       />
-      <div>
+      <div 
+      style={{
+        display : 'grid',
+        gridTemplateColumns: "70% 30%",
+        gridColumnGap: "1rem"
+      }}
+      >
+        <div>
       <table width="100%">
         <thead>
           <tr>
@@ -54,7 +62,14 @@ function App() {
         </tbody>
       </table>
       </div>
-
+      {
+        selectedItem && (
+          <div>
+            <h1>{selectedItem.name.english}</h1>
+          </div>
+        )
+      }
+      </div>
     </div>
   );
 }
